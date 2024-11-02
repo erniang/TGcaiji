@@ -11,8 +11,8 @@ Author URI: https://www.xxweb.cc/
 if (!defined('ABSPATH')) exit;
 
 class TelegramMessageCollector {
-    private $bot_token = '7312642052:AAHCHzoYHYu8C8vmSa47GxtFj-dkvPr5R3c'; //你的机器人token
-    private $chat_id = '-1002379834769';                                   //要采集的群组id
+    private $bot_token = '你的机器人token';                                 //你的机器人token
+    private $chat_id = '要采集的群组id';                                   //要采集的群组id
 
     public function __construct() {
         add_action('admin_menu', [$this, 'create_admin_menu']);
@@ -127,7 +127,7 @@ class TelegramMessageCollector {
             'post_title' => '精选影视分享-' . date('Y-m-d'),    //发布时的标题
             'post_content' => $combined_content,
             'post_status' => 'publish',                        //选择公开还是私有
-            'post_category' => [10]                             //发布时的分类目录ID
+            'post_category' => [1]                             //发布时的分类目录ID
         ]);
     }
 
